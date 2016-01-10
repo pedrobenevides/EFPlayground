@@ -1,0 +1,14 @@
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EFStudy.Output.exe.config
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EFStudy.Output.exe
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EFStudy.Output.pdb
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EntityFramework.dll
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EntityFramework.xml
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\obj\Debug\EFStudy.Output.csprojResolveAssemblyReference.cache
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\obj\Debug\EFStudy.Output.exe
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\obj\Debug\EFStudy.Output.pdb
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EFStudy.Core.dll
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EFStudy.Core.pdb
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EFStudy.Infra.Data.dll
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Output\bin\Debug\EFStudy.Infra.Data.pdb

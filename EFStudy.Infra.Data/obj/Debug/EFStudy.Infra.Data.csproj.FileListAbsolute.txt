@@ -1,0 +1,12 @@
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\bin\Debug\EFStudy.Infra.Data.dll.config
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\bin\Debug\EFStudy.Infra.Data.dll
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\bin\Debug\EFStudy.Infra.Data.pdb
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\bin\Debug\EFStudy.Core.dll
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\bin\Debug\EntityFramework.dll
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\bin\Debug\EFStudy.Core.pdb
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\bin\Debug\EntityFramework.xml
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\obj\Debug\EFStudy.Infra.Data.csprojResolveAssemblyReference.cache
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\obj\Debug\EFStudy.Infra.Data.dll
+c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Infra.Data\obj\Debug\EFStudy.Infra.Data.pdb
