@@ -1,5 +1,0 @@
-c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Core\bin\Debug\EFStudy.Core.dll
-c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Core\bin\Debug\EFStudy.Core.pdb
-c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Core\obj\Debug\EFStudy.Core.csprojResolveAssemblyReference.cache
-c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Core\obj\Debug\EFStudy.Core.dll
-c:\users\pedro\documents\visual studio 2015\Projects\EFStudy\EFStudy.Core\obj\Debug\EFStudy.Core.pdb
