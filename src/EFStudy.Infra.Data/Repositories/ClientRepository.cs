@@ -15,10 +15,15 @@ namespace EFStudy.Infra.Data.Repositories
             this.context = context;
             clients = context.DbSet;
         }
-        
+
         public Client GetByIdAsNoTracking(int id)
         {
             return clients.AsNoTracking().FirstOrDefault(c => c.Id == id);
+        }
+
+        public IQueryable<Client> GetAll()
+        {
+            return clients;
         }
     }
 }

@@ -1,4 +1,6 @@
 using System.Data.Entity.Migrations;
+using System.Linq;
+using EFStudy.Core.Entities;
 
 namespace EFStudy.Infra.Data.Migrations
 {
@@ -11,18 +13,17 @@ namespace EFStudy.Infra.Data.Migrations
 
         protected override void Seed(MyContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            if (context.Clients.Any()) return;
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            InsertClients(1000, context);
+        }
+
+        private static void InsertClients(int numberOfClients, MyContext context)
+        {
+            for (var i = 0; i <= numberOfClients; i++)
+            {
+                context.Clients.Add(new Client { Name = $"Fulano {i}" });
+            }
         }
     }
 }
