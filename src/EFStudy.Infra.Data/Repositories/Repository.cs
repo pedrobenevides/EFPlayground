@@ -8,13 +8,13 @@ namespace EFStudy.Infra.Data.Repositories
 {
     public class Repository<T> : IRepositoryBase<T> where T : Entity
     {
-        private readonly IUnitOfWork<T> unitOfWork;
+        private readonly IUnitOfWork unitOfWork;
         private readonly IDbSet<T> dbSet; 
 
-        public Repository(IUnitOfWork<T> unitOfWork)
+        public Repository(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            dbSet = unitOfWork.DbSet;
+            dbSet = unitOfWork.DbSet<T>();
         }
 
         public T Create(T entity)

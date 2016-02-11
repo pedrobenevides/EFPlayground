@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using EFStudy.Core.Entities;
 using EFStudy.Infra.Data;
-using EFStudy.Infra.Data.Configuration;
 using EFStudy.Infra.Data.Repositories;
-using ConsoleTables.Core;
 
 namespace EFStudy.Output
 {
@@ -12,26 +10,17 @@ namespace EFStudy.Output
     {
         static void Main(string[] args)
         {
+            var uow = new UnitOfWork(new MyContext());
+            var clientRepository = new ClientRepository(uow);
 
-            var unitOfWork = new UnitOfWork<Client>(new MyContext());
-            var clientRepository = new ClientRepository(unitOfWork);
-
-
-            //unitOfWork.Commit();
-
-            var clients = clientRepository.GetAll();
-            var list = clients.ToList();
-            var isInMemory = DBExtensions.IsQueryableInMemory(clients);
-
-            var table = new ConsoleTable("Nome");
-
-            foreach (var client in list)
+            var cliente = new Client
             {
-                table.AddRow(client.Name);
-            }
+                Name = "Teste 1",
+                Jobs = new List<Job> {new Job {Name = "Job do Cliente 1"}}
+            };
 
-            
-            table.Write();
+            clientRepository.Create(cliente);
+            uow.Dispose();
             Console.ReadKey();
         }
     }

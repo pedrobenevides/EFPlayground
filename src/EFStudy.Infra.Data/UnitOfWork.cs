@@ -1,35 +1,49 @@
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using EFStudy.Core.Entities;
 using EFStudy.Infra.Data.Interfaces;
 
 namespace EFStudy.Infra.Data
 {
-    public class UnitOfWork<T> : IUnitOfWork<T> where T : Entity
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        private readonly MyContext context;
-        
+        private readonly MyContext _context;
+        private DbContextTransaction _transaction;
+        private bool _isToRollBack;
+
         public UnitOfWork(MyContext context)
         {
-            this.context = context;
+            _context = context;
         }
-        
+
         public void BeginTransaction()
         {
-            throw new NotImplementedException();
+            _transaction = _transaction ?? _context.Database.BeginTransaction();
         }
 
         public void Commit()
         {
-            context.SaveChanges();
+            if (_isToRollBack) return;
+
+            _context.SaveChanges();
         }
 
-        public DbEntityEntry<T> Entry(T entity)
+        public void Rollback()
         {
-            return context.Entry(entity);
+            _isToRollBack = true;
+            _transaction.Rollback();
         }
 
-        public DbSet<T> DbSet => context.Set<T>();
+        public DbEntityEntry<T> Entry<T>(T entity) where T : class => _context.Entry(entity);
+
+        public DbSet<T> DbSet<T>() where T : class => _context.Set<T>();
+
+        public void Dispose()
+        {
+            if (!_isToRollBack)
+                Commit();
+
+            GC.SuppressFinalize(this);
+        }
     }
 }

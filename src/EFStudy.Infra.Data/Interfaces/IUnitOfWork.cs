@@ -1,15 +1,15 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using EFStudy.Core.Entities;
 
 namespace EFStudy.Infra.Data.Interfaces
 {
-    public interface IUnitOfWork<T> where T : Entity
+    public interface IUnitOfWork
     {
         void BeginTransaction();
         void Commit();
-        DbEntityEntry<T> Entry(T entity);
+        void Rollback();
 
-        DbSet<T> DbSet { get; }
+        DbEntityEntry<T> Entry<T>(T entity) where T : class;
+        DbSet<T> DbSet<T>() where T : class;
     }
 }

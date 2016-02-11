@@ -7,13 +7,13 @@ namespace EFStudy.Infra.Data.Repositories
 {
     public class ClientRepository : Repository<Client>, IClientRepository
     {
-        private readonly IUnitOfWork<Client> context;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IDbSet<Client> clients;
 
-        public ClientRepository(IUnitOfWork<Client> context) : base(context)
+        public ClientRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-            this.context = context;
-            clients = context.DbSet;
+            _unitOfWork = unitOfWork;
+            clients = unitOfWork.DbSet<Client>();
         }
 
         public Client GetByIdAsNoTracking(int id)
