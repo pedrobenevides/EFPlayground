@@ -3,19 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFStudy.Output", "src/EFStudy.Output\EFStudy.Output.csproj", "{F3B7BA52-D12F-4B8D-A1AF-AAC70742012C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFStudy.Output", "src\EFStudy.Output\EFStudy.Output.csproj", "{F3B7BA52-D12F-4B8D-A1AF-AAC70742012C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EFStudy.Infra.Data", "EFStudy.Infra.Data", "{FE10ED2F-CFDA-4EB9-9426-37C89EB2F696}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - EFStudy.Core", "1 - EFStudy.Core", "{157A78C9-F273-4DA0-B5F6-C5B9732B63CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFStudy.Core", "src/EFStudy.Core\EFStudy.Core.csproj", "{B1D0093E-4753-40D6-802D-21B29524E4B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFStudy.Core", "src\EFStudy.Core\EFStudy.Core.csproj", "{B1D0093E-4753-40D6-802D-21B29524E4B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - EFStudy.Infrastructure", "2 - EFStudy.Infrastructure", "{CB769C71-54BD-4F65-BB98-8EE89917EE14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFStudy.Infra.Data", "src/EFStudy.Infra.Data\EFStudy.Infra.Data.csproj", "{5874B46C-3F16-44AB-BE61-68E5B3E18F38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFStudy.Infra.Data", "src\EFStudy.Infra.Data\EFStudy.Infra.Data.csproj", "{5874B46C-3F16-44AB-BE61-68E5B3E18F38}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - EFStudy.Debug", "3 - EFStudy.Debug", "{4A56621D-8B14-411E-9330-CFF19BE028AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0B26B874-F200-4451-93A6-4F04F23AFACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFStudy.Infra.Data.Test", "EFStudy.Infra.Data.Test\EFStudy.Infra.Data.Test.csproj", "{D5FD1D3B-18D9-4798-B4BE-E2FAB59D7B5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,10 @@ Global
 		{5874B46C-3F16-44AB-BE61-68E5B3E18F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5874B46C-3F16-44AB-BE61-68E5B3E18F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5874B46C-3F16-44AB-BE61-68E5B3E18F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5FD1D3B-18D9-4798-B4BE-E2FAB59D7B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5FD1D3B-18D9-4798-B4BE-E2FAB59D7B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5FD1D3B-18D9-4798-B4BE-E2FAB59D7B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5FD1D3B-18D9-4798-B4BE-E2FAB59D7B5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +52,7 @@ Global
 		{FE10ED2F-CFDA-4EB9-9426-37C89EB2F696} = {CB769C71-54BD-4F65-BB98-8EE89917EE14}
 		{B1D0093E-4753-40D6-802D-21B29524E4B4} = {157A78C9-F273-4DA0-B5F6-C5B9732B63CF}
 		{5874B46C-3F16-44AB-BE61-68E5B3E18F38} = {FE10ED2F-CFDA-4EB9-9426-37C89EB2F696}
+		{0B26B874-F200-4451-93A6-4F04F23AFACE} = {CB769C71-54BD-4F65-BB98-8EE89917EE14}
+		{D5FD1D3B-18D9-4798-B4BE-E2FAB59D7B5E} = {0B26B874-F200-4451-93A6-4F04F23AFACE}
 	EndGlobalSection
 EndGlobal

@@ -14,6 +14,7 @@ namespace EFStudy.Infra.Data
         public UnitOfWork(MyContext context)
         {
             _context = context;
+            BeginTransaction();
         }
 
         public void BeginTransaction()
@@ -25,6 +26,7 @@ namespace EFStudy.Infra.Data
         {
             if (_isToRollBack) return;
 
+            _transaction.Commit();
             _context.SaveChanges();
         }
 
@@ -37,6 +39,8 @@ namespace EFStudy.Infra.Data
         public DbEntityEntry<T> Entry<T>(T entity) where T : class => _context.Entry(entity);
 
         public DbSet<T> DbSet<T>() where T : class => _context.Set<T>();
+
+        public DbContextTransaction Transaction => _transaction;
 
         public void Dispose()
         {

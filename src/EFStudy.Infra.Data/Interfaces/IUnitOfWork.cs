@@ -8,8 +8,11 @@ namespace EFStudy.Infra.Data.Interfaces
         void BeginTransaction();
         void Commit();
         void Rollback();
+        void Dispose();
 
         DbEntityEntry<T> Entry<T>(T entity) where T : class;
         DbSet<T> DbSet<T>() where T : class;
+        DbContextTransaction Transaction { get; }
     }
+
 }

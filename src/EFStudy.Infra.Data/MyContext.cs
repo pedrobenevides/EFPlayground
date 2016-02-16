@@ -7,7 +7,7 @@ namespace EFStudy.Infra.Data
 {
     public class MyContext : DbContext
     {
-        public MyContext() : base("PlaygroundEF")
+        public MyContext(string connName = "PlaygroundEF") : base(connName)
         {
             
         }
