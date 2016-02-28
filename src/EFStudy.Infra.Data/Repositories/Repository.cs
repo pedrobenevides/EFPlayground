@@ -1,15 +1,15 @@
-﻿using System;
-using System.Data.Entity;
-using EFStudy.Core.Entities;
+﻿using EFStudy.Core.Entities;
 using EFStudy.Core.Interfaces.Repositories;
 using EFStudy.Infra.Data.Interfaces;
+using System;
+using System.Data.Entity;
 
 namespace EFStudy.Infra.Data.Repositories
 {
     public class Repository<T> : IRepositoryBase<T> where T : Entity
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly IDbSet<T> dbSet; 
+        private readonly IDbSet<T> dbSet;
 
         public Repository(IUnitOfWork unitOfWork)
         {
@@ -31,10 +31,12 @@ namespace EFStudy.Infra.Data.Repositories
         {
             var entity = dbSet.Find(id);
 
-            if(entity == null)
+            if (entity == null)
                 throw new Exception($"There is no entity with this id {id}");
 
             dbSet.Remove(entity);
         }
+
+        public T GetById(int id) => dbSet.Find(id);
     }
 }

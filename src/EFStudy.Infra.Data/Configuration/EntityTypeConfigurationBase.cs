@@ -10,6 +10,8 @@ namespace EFStudy.Infra.Data.Configuration
         {
             HasKey(x => x.Id);
             Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
+            Property(x => x.TimeStamp).IsRowVersion().IsConcurrencyToken(true);
         }
     }
 }
